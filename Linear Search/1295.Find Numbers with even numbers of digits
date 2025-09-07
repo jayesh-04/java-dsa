@@ -1,0 +1,27 @@
+https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+//Question is solved by taking input
+
+class FindNum {
+	//1295. Find numbers of even numbers of digits
+    public static void main(String[] args){
+        int[] arr={213,12,23,432,3455};
+        int count = findNumbers(arr);
+		System.out.println(count);
+    }
+
+    //Code for LeetCode
+    public static int findNumbers(int[] nums) {
+    int num = 0;
+       for(int i=0;i<nums.length;i++){
+        int count = 0;
+		while(nums[i]>0){
+			count++;    
+            nums[i]=nums[i]/10;
+        }
+        if(count%2==0){
+            num++;
+            }
+	   }
+       return num; 
+    }
+}
