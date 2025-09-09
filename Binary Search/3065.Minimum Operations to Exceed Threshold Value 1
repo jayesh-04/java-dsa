@@ -1,0 +1,16 @@
+https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i/
+3065.Minimum Operations to Exceed Threshold Value 1
+
+class Solution {
+    public int minOperations(int[] nums, int k) {
+        int count=0;
+        for(int a=0;a<nums.length;a++){
+            if(k>nums[a]){
+                count++;
+            }else{
+                continue;
+            }
+        }
+        return count;
+    }
+}
