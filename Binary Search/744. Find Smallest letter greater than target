@@ -16,5 +16,7 @@ class Solution {
         return start<letters.length ? letters[start] : letters[0];
 //      one more alternative to return statement but quite complex to understand for beginers
 //      return letters[start % letters.length];
+//      in above condition if the number other than zero and length is modulus of length then the answer will be number itself
+//      if 0 or length is modulus of length it will return 0 only
     }
 }
