@@ -1,0 +1,21 @@
+https://leetcode.com/problems/guess-number-higher-or-lower/
+374. Guess number higher or lower
+
+public class Solution extends GuessGame {
+    public int guessNumber(int n) {
+       int start =0;
+       int end=n;
+       while(start<=end){
+        int mid=start+(end-start)/2;
+        int guessNum=guess(mid);
+        if (guessNum==0){
+            return mid;
+        }else if(guessNum == -1){
+            end =mid-1;
+        }else if(guessNum==1){
+            start=mid+1;
+        }
+    }
+    return -1;
+  }
+}
