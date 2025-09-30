@@ -1,0 +1,39 @@
+441. Arranging Coins
+https://leetcode.com/problems/arranging-coins/
+
+
+1st Way to Solve the question without using Binary Search
+
+class Solution {
+    public int arrangeCoins(int n) {
+        int a=1;
+       while(n>=a){
+        n=n-a;
+        a++;
+    
+       }
+       return a-1; 
+    }
+}
+
+
+2nd Way to solve the question using Binary Search
+
+class Solution {
+    public int arrangeCoins(int n) {
+        long start=1;
+        long end=n;
+        while(start<=end){
+            long mid=start+(end-start)/2;
+            long num=mid*(mid+1)/2;
+            if(num==n){
+                return (int)mid;
+            }else if(num<n){
+                start=mid+1;
+            }else{
+                end=mid-1;
+            }
+        }
+        return (int)end;
+    }
+}
