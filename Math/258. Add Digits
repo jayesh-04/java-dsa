@@ -1,0 +1,25 @@
+258. Add Digits
+https://leetcode.com/problems/add-digits/
+
+class Solution {
+    public int addDigits(int num){
+        if(num==0){return num;}
+        while(num!=0){
+            if(num<=9){
+                return num;
+            }else{
+            num=number(num);
+            }
+        }
+    return num;           
+    }
+    public int number(int num){
+        int rem=0;
+        while(num!=0){
+            int no=num%10;
+            rem=no+rem;
+            num/=10;
+        }
+    return rem;
+    }
+}
