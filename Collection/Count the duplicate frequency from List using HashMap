@@ -1,0 +1,20 @@
+Count the duplicate frequency from List using HashMap
+
+package CollectionPrep;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+public class CountDuplicateFrequency {
+	public static void main(String[] args) {
+		List<Integer> l1 = new ArrayList<Integer>(
+				Arrays.asList(6,1,2,2,3,4,4,5,1,1,1,1,6,4));
+		HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+		for(int i : l1) {
+			hm.put(i, hm.getOrDefault(i, 0) + 1);
+		}
+		System.out.println(hm);
+	}
+}
