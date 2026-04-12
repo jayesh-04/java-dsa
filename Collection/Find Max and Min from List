@@ -1,0 +1,32 @@
+Find Max and Min from the List
+
+package CollectionPrep;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class FindMaxMin {
+	public static void main(String[] args) {
+		List<Integer> l1 = new ArrayList<Integer>(Arrays.asList(5,1,3,4,8));
+		if(l1.isEmpty()) {
+		    throw new IllegalArgumentException("List cannot be empty");
+		}
+		int max = l1.get(0);
+		int min = l1.get(0);
+		for(int num : l1) {
+			if(num>max) max=num;
+			if(num<min) min=num; 
+		}
+		
+//		for(int i = 0;i<=l1.size()-1;i++) {
+//			if(l1.get(i)>max) {
+//				max = l1.get(i);
+//			}else if(l1.get(i)<min) {
+//				min = l1.get(i);
+//			}
+//		}
+		
+		System.out.println("Max : "+max+" ----- "+"Min : "+min);
+	}
+}
