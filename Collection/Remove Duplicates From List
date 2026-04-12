@@ -1,0 +1,20 @@
+Remove Duplicates From List
+
+package CollectionPrep;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+public class RemoveDuplicatesFromList {
+	public static void main(String[] args) {
+		List<Integer> al = new ArrayList<Integer>(
+				Arrays.asList(6,1,2,2,3,4,4,5,1,1,1,1));
+		
+		Set<Integer> s1 = new LinkedHashSet<Integer>(al);
+		System.out.println(s1);
+
+	}
+}
