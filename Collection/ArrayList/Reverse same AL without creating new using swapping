@@ -1,0 +1,27 @@
+Reverse same AL without creating new using swapping
+
+package CollectionPrep;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ReverseAL2 {
+	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>(
+                Arrays.asList(1, 2, 3, 4, 5));
+		int left = 0;
+		int right = list.size()-1;
+		
+		while(left<right) {
+			int temp = list.get(left);
+			list.set(left, list.get(right));
+			list.set(right, temp);
+			
+			left++;
+			right--;
+		}
+		
+		System.out.println(list);
+	}
+}
+
+
